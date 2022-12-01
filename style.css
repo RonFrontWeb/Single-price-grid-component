@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --dark-cyan: hsl(179, 46%, 45%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --karla:'Karla', sans-serif;
+
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--karla);
+}
+
+body {
+    padding: 40px;
+    background-color: var(--grayish-blue);
+    color: white;
+}
+
+.gridlayout {
+    overflow: hidden;
+    max-width: 600px;   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-areas: 
+    "white white"
+    "darkcyan darkcyan"
+    "cyan cyan"
+    ;
+    
+}
+.card {
+    font-size: 10px;
+    max-width: 100%;
+    padding: 20px;
+}
+.card--white {
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    color: black;
+    grid-area: white;
+}
+.card--darkcyan {
+    background-color:var(--dark-cyan);
+    grid-area: darkcyan;
+
+}
+.card--cyan {
+    border-radius: 0 0 5px 5px;
+    background-color: var(--cyan);
+    padding-right: 6rem;
+}
+
+.text {
+    font-size:.6rem;
+    letter-spacing: 1.2px;
+    line-height: 2;
+    padding-top: 10px;
+
+}
+
+.text--white {
+    color: white;
+    
+}
+.text--gray {
+    color: rgba(104, 104, 104, 0.512);
+}
+
+
+.title {
+    font-size: 1.3rem;
+    color: var(--cyan);
+}
+.title--white {
+    color: white;
+}
+
+.highlight {
+    color: var(--bright-yellow);
+    font-size:1rem;
+    padding: 20px 20px 0 0 ;
+}
+.button {
+    width: 250px;
+    max-width: 100%;
+    padding: 10px;
+    background-color:var(--bright-yellow);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+@media only screen and (min-width:600px) {
+    .gridlayout {
+       grid-template-areas:
+        "white white white white"
+        "darkcyan cyan cyan cyan"
+       ;
+        
+    }
+  }
