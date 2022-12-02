@@ -24,11 +24,7 @@ function Grid() {
                     <Button>Sign Up</Button>
                 </Card>
 
-                <Card 
-                className="card card--cyan"
-                text="more shit"
-                
-                >
+                <Card>
                 <Title className="title title--white" title="Why Us"/>
                     <Text className="text text--white" text="Tutorials by industry experts
                 Peer &amp; expert code review
